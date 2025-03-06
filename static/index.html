@@ -11,20 +11,21 @@
             padding: 0;
             background-color: #0b0f26;
             color: #fff;
+            text-align: center;
         }
         header {
             background-color: #1c1f42;
             padding: 20px;
-            text-align: center;
         }
         header h1 {
-            color: #fff;
             margin: 0;
         }
-        .main-content {
+        .container {
             display: flex;
-            flex-wrap: wrap;
-            max-width: 1000px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: #1a1d3a;
@@ -34,16 +35,19 @@
         .sushi-image {
             flex: 1;
             text-align: center;
-            padding: 10px;
         }
         .sushi-image img {
-            max-width: 100%;
+            max-width: 90%;
             border-radius: 8px;
-            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .sushi-image img:hover {
+            transform: scale(1.05);
         }
         .sushi-description {
             flex: 1;
             padding: 20px;
+            text-align: left;
         }
         .ingredients {
             margin-top: 20px;
@@ -58,14 +62,17 @@
         }
         .order-button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #f7d046;
             color: #1c1f42;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
+        }
+        .order-button:hover {
+            background-color: #ffcc00;
         }
         .order-confirmation {
             margin-top: 10px;
@@ -75,13 +82,13 @@
         }
         footer {
             background-color: #1c1f42;
-            padding: 10px;
-            text-align: center;
+            padding: 15px;
             margin-top: 20px;
         }
         footer a {
             color: #f7d046;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -91,20 +98,14 @@
         <h1>Світ суші</h1>
     </header>
 
-
-<div class="sushi-image">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Світ суші">
-</div>
-
-Це зображення зі статичної колекції Wikipedia, тому воно точно завантажиться. Якщо хочеш інше зображення, скажи мені, і я знайду найкращий варіант!
-
-
+    <div class="container">
+        <div class="sushi-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Світ суші">
         </div>
 
         <div class="sushi-description">
             <h2>Назва суші: Рол Мрія</h2>
             <p>Відкрийте для себе справжній світ суші з нашим неперевершеним Ролом Мрія! Це ідеальне поєднання свіжої риби, ніжного авокадо та унікального соусу.</p>
-            <p>Наш Рол Мрія – це гармонія смаків, що підкорює кожного. Кожен шматочок наповнений найкращими інгредієнтами, які створюють ідеальний баланс ніжності та пряного смаку.</p>
 
             <h3>Інгредієнти:</h3>
             <ul class="ingredients">
@@ -127,6 +128,7 @@
                     <input type="radio" name="size"> Великий сет (12 шматків) - <span class="price">280 грн</span>
                 </label>
             </div>
+
             <button type="button" class="order-button" onclick="document.getElementById('order-confirmation').style.display='block'">Замовити суші</button>
             <p id="order-confirmation" class="order-confirmation">✅ Замовлення зроблено! Ваші суші вже готуються!</p>
         </div>
