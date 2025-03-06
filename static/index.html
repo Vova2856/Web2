@@ -9,16 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0b0f26;
-            color: #fff;
+            background: linear-gradient(to right, #2b1d0f, #4a2e16); /* Коричнево-золотий градієнт */
+            color: #f3eacb; /* Кремовий колір тексту */
             text-align: center;
         }
         header {
-            background-color: #1c1f42;
+            background-color: rgba(58, 40, 18, 0.9);
             padding: 20px;
-        }
-        header h1 {
-            margin: 0;
         }
         .container {
             display: flex;
@@ -28,13 +25,9 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #1a1d3a;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            background-color: rgba(73, 45, 20, 0.9);
+            box-shadow: 0 0 15px rgba(255, 223, 186, 0.3);
             border-radius: 8px;
-        }
-        .sushi-image {
-            flex: 1;
-            text-align: center;
         }
         .sushi-image img {
             max-width: 90%;
@@ -44,27 +37,10 @@
         .sushi-image img:hover {
             transform: scale(1.05);
         }
-        .sushi-description {
-            flex: 1;
-            padding: 20px;
-            text-align: left;
-        }
-        .ingredients {
-            margin-top: 20px;
-            padding-left: 20px;
-        }
-        .size-selection {
-            margin-top: 20px;
-        }
-        .price {
-            font-weight: bold;
-            color: #f7d046;
-        }
         .order-button {
-            display: inline-block;
+            background-color: #d4a44a;
+            color: #3b260f;
             padding: 12px 25px;
-            background-color: #f7d046;
-            color: #1c1f42;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -72,7 +48,7 @@
             transition: background 0.3s ease-in-out;
         }
         .order-button:hover {
-            background-color: #ffcc00;
+            background-color: #e0b456;
         }
         .order-confirmation {
             margin-top: 10px;
@@ -81,12 +57,12 @@
             display: none;
         }
         footer {
-            background-color: #1c1f42;
+            background-color: rgba(58, 40, 18, 0.9);
             padding: 15px;
             margin-top: 20px;
         }
         footer a {
-            color: #f7d046;
+            color: #d4a44a;
             text-decoration: none;
             font-weight: bold;
         }
@@ -108,7 +84,7 @@
             <p>Відкрийте для себе справжній світ суші з нашим неперевершеним Ролом Мрія! Це ідеальне поєднання свіжої риби, ніжного авокадо та унікального соусу.</p>
 
             <h3>Інгредієнти:</h3>
-            <ul class="ingredients">
+            <ul>
                 <li>Свіжий лосось</li>
                 <li>Авокадо</li>
                 <li>Червона ікра</li>
@@ -116,21 +92,8 @@
                 <li>Соус унагі</li>
             </ul>
 
-            <div class="size-selection">
-                <h3>Оберіть порцію:</h3>
-                <label>
-                    <input type="radio" name="size"> Малий сет (4 шматки) - <span class="price">120 грн</span>
-                </label><br>
-                <label>
-                    <input type="radio" name="size"> Середній сет (8 шматків) - <span class="price">200 грн</span>
-                </label><br>
-                <label>
-                    <input type="radio" name="size"> Великий сет (12 шматків) - <span class="price">280 грн</span>
-                </label>
-            </div>
-
             <button type="button" class="order-button" onclick="document.getElementById('order-confirmation').style.display='block'">Замовити суші</button>
-            <p id="order-confirmation" class="order-confirmation">✅ Замовлення зроблено! Ваші суші вже готуються!</p>
+            <p id="order-confirmation" class="order-confirmation" style="display:none;">✅ Замовлення зроблено! Ваші суші вже готуються!</p>
         </div>
     </div>
 
