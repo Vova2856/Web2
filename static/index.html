@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ суші</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0f26;
+            color: #fff;
+        }
+        header {
+            background-color: #1c1f42;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1d3a;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+        .sushi-image {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+        .sushi-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .sushi-description {
+            flex: 1;
+            padding: 20px;
+        }
+        .ingredients {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        .size-selection {
+            margin-top: 20px;
+        }
+        .price {
+            font-weight: bold;
+            color: #f7d046;
+        }
+        .order-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f7d046;
+            color: #1c1f42;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .order-confirmation {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #00ffcc;
+            display: none;
+        }
+        footer {
+            background-color: #1c1f42;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #f7d046;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Світ суші</h1>
+    </header>
+
+
+<div class="sushi-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg" alt="Світ суші">
+</div>
+
+Це зображення зі статичної колекції Wikipedia, тому воно точно завантажиться. Якщо хочеш інше зображення, скажи мені, і я знайду найкращий варіант!
+
+
+        </div>
+
+        <div class="sushi-description">
+            <h2>Назва суші: Рол Мрія</h2>
+            <p>Відкрийте для себе справжній світ суші з нашим неперевершеним Ролом Мрія! Це ідеальне поєднання свіжої риби, ніжного авокадо та унікального соусу.</p>
+            <p>Наш Рол Мрія – це гармонія смаків, що підкорює кожного. Кожен шматочок наповнений найкращими інгредієнтами, які створюють ідеальний баланс ніжності та пряного смаку.</p>
+
+            <h3>Інгредієнти:</h3>
+            <ul class="ingredients">
+                <li>Свіжий лосось</li>
+                <li>Авокадо</li>
+                <li>Червона ікра</li>
+                <li>Крем-сир</li>
+                <li>Соус унагі</li>
+            </ul>
+
+            <div class="size-selection">
+                <h3>Оберіть порцію:</h3>
+                <label>
+                    <input type="radio" name="size"> Малий сет (4 шматки) - <span class="price">120 грн</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="size"> Середній сет (8 шматків) - <span class="price">200 грн</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="size"> Великий сет (12 шматків) - <span class="price">280 грн</span>
+                </label>
+            </div>
+            <button type="button" class="order-button" onclick="document.getElementById('order-confirmation').style.display='block'">Замовити суші</button>
+            <p id="order-confirmation" class="order-confirmation">✅ Замовлення зроблено! Ваші суші вже готуються!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Всі права захищені © 2025. Більше інформації про суші можна знайти <a href="https://example.com" target="_blank">тут</a>.</p>
+    </footer>
+
+</body>
+</html>
